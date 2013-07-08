@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			function writeCookie(){
+				var domainArr = [
+					{name: 'Test1', domain: '.gelicia.com'},
+					{name: 'Test2', domain: 'gelicia.com'},
+					{name: 'Test3', domain: 'test.gelicia.com'},
+					{name: 'Test4', domain: 'attask.gelicia.com'},
+				];
+
+				for (var i = 0; i < domainArr.length; i++) {
+					var name = 'name' + i;
+			   		var val = domainArr[i].name;
+			   		//no date/expire to test session cookies
+			   		//var today = new Date();
+					document.cookie = cookieName +"=" + cookieValue 
+						//+ ";expires=" + myDate 
+				        + ";domain=" + domainArr[i].domain + ";path=/";
+				}
+			}
+		</script>
+	</head>
+	<body onload="writeCookie();">
+		<p>Cookie written</p>
+	</body>
+</html>
